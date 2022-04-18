@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Flexbox</title>
+    <style>
+        .container {
+            background-color: violet;
+            /* padding: 20px; */
+            display: flex;
+            /* flex-direction: column; */
+            justify-content: space-between;
+            /* height: 500px; */
+            align-items: stretch;
+            flex-wrap: wrap-reverse;
+            /* shorthand for flex-direction and flex-wrap */
+            flex-flow: column wrap;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            border: solid;
+            padding: 10px;
+            font-size: 2.5em;
+        }
+
+        /* Flex items properties */
+        #box1 {
+            /* order: 1; */
+            /* flex-grow: 1; */
+        }
+
+        #box3 {
+            /* order: 2; */
+            /* flex-shrink: ; */
+            flex-basis: 400px;
+        }
+        
+        #box2 {
+            /* order: 3; */
+            /* flex-grow: 2; */
+        }
+
+        /* higher the order, later the flex item is going to appear */
+    </style>
+</head>
+<body>
+    <!-- Flexible type box -> Used for making layouts -->
+    <!-- <div class="container"> -->
+        <!-- <div class="box" id="box1">1</div> -->
+        <!-- <div class="box" id="box2">2</div> -->
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+        <!-- <div class="box" id="box5">5</div>
+        <div class="box" id="box6">6</div> -->
+    </div>
+</body>
+</html>

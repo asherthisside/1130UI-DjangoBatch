@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Grid Areas and responsive grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            background-color: yellow;
+            display: grid;
+            grid-template-rows: 80px 80px 1fr 80px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            grid-template-areas:
+                'header header header'
+                'nav nav nav'
+                's1 s2 s3'
+                'footer footer footer'
+            ;
+        }
+
+        .container>* {
+            border: solid;
+            background-color: white;
+        }
+
+        /* header, nav, footer {
+            grid-column: 1 / span 3;
+        } */
+
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        #s1 {
+            grid-area: s1;
+        }
+
+        #s2 {
+            grid-area: s2;
+        }
+
+        #s3 {
+            grid-area: s3;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+
+        .grid-box {
+            height: 500px;
+            width: 500px;
+            background-color: yellow;
+            display: grid;
+            grid-template-rows: 100px 200px 150px;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: 200px 100px 180px;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 10px;
+            column-gap: 10px;
+            gap: 10px;
+        }
+
+        .grid-item {
+            background-color: aqua;
+            border: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="grid-box">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </div> -->
+
+    <div class="container">
+        <header></header>
+        <nav></nav>
+        <section id="s1">1</section>
+        <section id="s2">2</section>
+        <section id="s3">3</section>
+        <footer></footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More with variables</title>
+</head>
+<body>
+    <script>
+        // var - can be redeclared or re-initialized
+        // const - used to create constant type values.
+        // let - Used for block level initialization
+
+        // var game = "Cricket"
+        // console.log(game);   
+        // {
+        //     console.log("Before changing, game :- ", game);
+        //     game = "COD"
+        //     console.log("After changing, game :- ", game);
+        // }  
+        // console.log("Final value :- ", game);
+
+        // let game = "COD"
+        // console.log(game);
+        // {
+        //     let game = "CS-GO"
+        //     console.log(game);
+        // }
+        // console.log(game);
+
+        // {
+        //     let game = "Battlefield 2042"
+        //     console.log(game);
+        // }
+        // console.log(game);
+
+        // Data types - Number(integers and Floats), Strings, Boolean, Array, and objects
+
+        // typeof operator 
+        let num = 123.54
+        num = "This is Javascript"
+        num = "123"
+        num = "!@#$%^&"
+        num = true
+        // Boolean - True(1) / False(0)
+
+        // Array - Collection of data
+        num = [1, 2, 3]
+
+        num = {
+            name: "Vishal",
+            class : 12
+        }
+        // console.log(num.class);
+        // console.log(typeof num);
+        // console.log(typeof(num));
+
+
+        // Operators - Operator || Operation || Operands
+        /* 
+        Types of operators
+        1. Arithmetic operators - Mathematical calculations (+, -, *, /, **, %)
+        2. Comparision operators - (<, >, <=, >=, ==, ===)
+        3. Assignment operators - (=, +=, -=, *=, /=)
+        4. Logical operators - (AND, OR and NOT)
+        */
+
+        var a = 10
+        var b = 13
+        // c = a + b 
+        // c = a - b 
+        // c = a * b 
+        // c = a / b 
+        // c = a % b 
+        // c = a ** b 
+        // a = b
+        // a += b
+        // a -= b
+        // a *= b
+        // a /= b 
+        c = a === b
+
+        c = a > b && a == 10
+        c = a > b || a == 10
+        c = a!=10
+        // console.log(c)
+        // console.log(a);
+        // console.log(b);
+
+        /* 
+        == -> Checks for value only
+        === -> Checks for value as well as datatype
+        */
+
+
+        // JS Boxes - alert(), prompt() and confirm()
+        // alert("This is an alert message")
+
+        // let user_data = parseFloat(prompt("Enter something"))
+
+        // parseInt() and parseFloat()
+        // console.log(user_data, typeof user_data);
+        // let d = user_data * 10
+        // console.log(d);
+
+        let decision = confirm("Are you sure?")
+        console.log(decision);
+
+        // Take 2 number inputs from the user. and then print addition, subtraction, division and multiplication of these two numbers in same line.
+        </script>
+</body>
+</html>

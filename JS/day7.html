@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Functions</title>
+</head>
+
+<body>
+    <script>
+        // Anonymous functions
+        let a = function (arg1) {
+            console.log("This is an anonymous function");
+            console.log("My name is", arg1);
+            return 0
+        }
+
+        // let c = a("Shiv")
+        // console.log(c);
+
+
+        // Arrow function 
+        let b = (time) => {
+            console.log("This is an arrow function");
+            console.log("The time now is", time);
+        }
+        // b(9)
+
+        // Number functions in JS 
+        let d = "1234"       // "1234" => 1234
+        d = "This is a string"      //"This is a string" => This is a string
+        d = "123abc"
+        d = true
+        // console.log(d, typeof d);
+
+        let e = Number(d)
+        // e = parseInt(d)
+        // console.log(e, typeof e);
+
+
+        // String functions
+        // let f = 123 
+        // f = 0
+        // f = false
+        let f = "This is a string"
+        // console.log(f);
+
+        let g = f.toString()
+        g = f.toUpperCase()
+        g = f.toLowerCase()
+        g = f.endsWith("g")
+        g = f.search("s")          //Returns the index of the search index
+        g = f.indexOf("i", 6)
+        g = f.lastIndexOf("i")
+        g = f.charAt("6")
+        g = f.concat(". This is another string")
+        g = f.replace("string", "Text pattern")
+        g = f.split("a")
+        g = f.slice(3, 7)
+        g = f.substring(1, 7)
+        // console.log(g);
+        // console.log(f);
+
+        // Array and Objects 
+        let h = [1, 2, 3]
+        h = ["One", "Two", "Three"]
+        h = [1, 2, 3, "Four", "Five", 6, false, "Seven", 8, true, [11, 22, 33], 34, 45, 56]
+        // h.forEach(anyFunc)
+
+        // function anyFunc(items, index, array) {
+        //     console.log(index + " => " + items);
+        // }
+
+        // for (let items of h) {
+        //     console.log(items);
+        // }
+
+        // console.log(h);
+        // console.log(h[6], typeof h[6]);
+        // console.log(h[10][1]);
+
+        // for(let i = 0; i < h.length; i++) {
+        //     console.log(h[i]);
+        // }
+
+        // console.log(h.length);
+
+        // Create an array that contains the names of 10 students. Then print out the names that ends with the letter 'a'.
+
+        // For, While and do-while
+        // foreach loop, for-in loop and for-of loop
+
+
+
+        // Objects 
+        let j = {
+            'name': 'Hitesh',
+            'class': 12,
+            'games': ['Cricket, Badminton, Football']
+        }
+
+        console.log(j['class']);
+        console.log(j.games);
+
+        for (const key in j) {
+            console.log(j[key]);
+        }
+
+        let student_marks = {
+            'English': 90,
+            'Maths': 90,
+            'Science': 70,
+            'Hindi': 40
+        }
+
+        let multiobj = {
+            'haaris': { 
+                name: 'Haaris', 
+                'Address': 'Noida', 
+                'Phno.': 9645 
+            },
+            'Akash': { 
+                'name': 'Akash', 
+                'Address': 'Noida', 
+                'Phno.': 9345 
+            }
+        }
+
+        let names = ["Haaris", "Deepanshu", "Saurabh", "Shruti", "Akanksha", "Anindita", "Shibna", "Gagan", "Ankit", "Ankita"]
+
+        for (const name of names) {
+            // let ln = name.length
+            // let lastIndex = ln-1
+            // if (name.charAt(0) == 'A' && name.charAt(lastIndex) == 'a') {
+            //     console.log(name);
+            // }
+            if (name.endsWith('a')) {
+                console.log(name);
+            }
+        }
+        
+
+        length
+    </script>
+</body>
+
+</html>

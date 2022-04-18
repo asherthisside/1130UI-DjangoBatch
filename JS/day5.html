@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Loops</title>
+</head>
+
+<body>
+    <script>
+        // Loops - Iterative control structure 
+        // console.log(1);
+        // console.log(1);
+        // console.log(1);
+        // console.log(1);
+        // console.log(1);
+        // console.log(1);
+        // console.log(1);
+        // console.log(1);
+        // console.log(1);
+        // console.log(1);
+        // console.log(1);
+
+        /* 
+        Steps - 
+        1. Condition Initialization 
+        2. Condition Update
+        3. Condition check 
+        */
+
+
+        // 1. Entry control loops - While and for loops
+        // 2. Exit control loop - Do-while
+
+        // DRY - Don't Repeat Yourself
+
+        // variable (condition) initialize 
+        // a = 10
+        // while(a >= 1) {
+        //     console.log(a);
+        //     a = a - 1
+        // }
+
+        // let i = 1
+        // while(i < 11) {
+        //     console.log("I am using while loop", i);
+        // }
+
+        /* 
+        12 * 1 = 12
+        12 * 2 = 24
+        12 * 3 = 36 
+        */
+
+        // let m = 1
+        // while (m <= 50) {
+        //     if (m % 4 == 0) {
+        //         console.log(m)
+        //     }
+        //     m++;
+        // }
+
+        // let n = 21;
+        // while (n <= 20) {
+        //     console.log(n);
+        //     n = n + 2;
+        // }
+
+        // do {
+        //     console.log(n);
+        //     n = n + 2
+        // }while(n <= 20)
+
+
+        // For Loop
+        // for(initialization; checking; updation) {
+            // statements
+        // }
+
+        // Take one number from the user. Print its table upto 10. 
+        // let num1 = parseInt(prompt("Enter a number"))
+        // let x = 1
+        // while(x <= 10) {
+        //     console.log(num1 + " * " + x + " = " + num1 * x);
+        //     x++;
+        // }
+
+        for (let s = 1; s <= 20; s++) {
+            console.log(s);
+        }
+
+        let num1 = 13
+        let num2 = 74
+        let num3 = 67
+        if (num1 > num2 && num1 > num3) {
+            if (num2 > num3) {
+                alert(num1 + " > " + num2 + " > " + num3)
+            }
+            else {
+                alert(num1 + " > " + num3 + " > " + num2)
+            }
+        }
+
+        else if (num2 > num1 && num2 > num3) {
+            if (num1 > num3) {
+                alert(num2 + " > " + num1 + " > " + num3)
+            }
+            else {
+                alert(num2 + " > " + num3 + " > " + num1)
+            }
+        }
+
+        else if (num3 > num1 && num3 > num2) {
+            if (num1 > num2) {
+                alert(num3 + " > " + num1 + " > " + num2)
+            }
+            else {
+                alert(num3 + " > " + num2 + " > " + num1)
+            }
+        }
+    </script>
+</body>
+
+</html>

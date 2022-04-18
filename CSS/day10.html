@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            height: 100vh;
+            width: 100%;
+            background-color: red;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;        /* fr -> fraction */
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            /* row-gap: 10px;
+            column-gap: 10px; */
+            gap: 20px;
+        }
+
+        .box:nth-child(even) {
+            background-color: skyblue;
+        }
+        .box:nth-child(odd) {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+        <div class="box" id="box5"></div>
+        <div class="box" id="box6"></div>
+        <div class="box" id="box7"></div>
+        <div class="box" id="box8"></div>
+        <div class="box" id="box9"></div>
+        <div class="box" id="box10"></div>
+    </div>
+</body>
+</html>

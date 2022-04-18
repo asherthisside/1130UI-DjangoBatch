@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            min-height: 200vh;
+            width: 100%;
+            background-color: wheat;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 1em auto;
+        }
+
+        div.userinput {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        div.userinput>div {
+            margin: 1em;
+        }
+
+        div.userinput>div label {
+            font-size: 1.5em;
+        }
+
+        div.userinput>div input {
+            width: 300px;
+            height: 30px;
+        }
+
+        div.userinput>button {
+            padding: 0.5em;
+            font-size: 1.25em;
+            border-radius: 1em;
+        }
+
+        .resume {
+            width: 90%;
+            margin: auto;
+            display: none;
+        }
+
+        .resume>* {
+            margin: 1em auto;
+            font-family: 'Baloo 2', cursive;
+        }
+
+        .name {
+            font-size: 4em;
+            float: left;
+            font-family: 'Lobster', cursive;
+        }
+
+        .contact {
+            float: right;
+            font-size: 2em;
+        }
+
+        .intro {
+            font-size: 1.5em;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+        <hr>
+        <p>Welcome to this Introduction template builder, here you can enter your details and generate a simple template
+            for yourself</p>
+        <h2>Build for Yourself</h2>
+        <div class="userinput">
+            <div>
+                <label for="in1">Name: </label> <br>
+                <input type="text" name="" id="in1" placeholder="Your Name">
+            </div>
+            <div>
+                <label for="in2">Email: </label> <br>
+                <input type="email" name="" id="in2" placeholder="Your Email">
+            </div>
+            <div>
+                <label for="in3">Phone: </label> <br>
+                <input type="text" name="" id="in3" placeholder="Your Phone No.">
+            </div>
+            <div>
+                <label for="in4">Write a paragraph: </label> <br>
+                <textarea name="" id="in4" cols="70" rows="10" placeholder="Describe yourself"></textarea>
+            </div>
+            <button id="create">Create</button>
+        </div>
+
+        <div class="resume">
+            <h2>Your resume is ready </h2>
+            <div class="name">Haaris Saifi</div>
+            <div class="contact">
+                <div class="phone">
+                    9887585676
+                </div>
+                <div class="email">
+                    haaris@trainingbasket.in
+                </div>
+            </div>
+            <div class="intro">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur dolore accusamus necessitatibus,
+                repellendus delectus alias facere beatae! Eveniet, totam adipisci et dicta voluptas nesciunt provident
+                praesentium magni ducimus repellat voluptates.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let btn = document.getElementById("create")
+        let res = document.getElementsByClassName("resume")
+        let in1 = document.getElementById("in1")
+        let in2 = document.getElementById("in2")
+        let in3 = document.getElementById("in3")
+        let in4 = document.getElementById("in4")
+        btn.addEventListener("click", () => {
+            let name = document.querySelector(".name")
+            let phone = document.querySelector(".phone")
+            let email = document.querySelector(".email")
+            let intro = document.querySelector(".intro")
+            res[0].style.display = "block"
+            let v1 = in1.value
+            let v2 = in2.value
+            let v3 = in3.value
+            let v4 = in4.value
+            // console.log(v1, v2, v3, v4)
+            name.innerHTML = v1;
+            phone.innerHTML = v2;
+            email.innerHTML = v3;
+            intro.innerHTML = v4;
+        })
+    </script>
+</body>
+</html>

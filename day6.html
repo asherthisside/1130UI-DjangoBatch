@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta - Data -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Forms</title>
+</head>
+<body>
+    <!-- We take user input in HTML with the help of a form. To create a Form, we use <form> tag. Then <input> tag is needed to create the input fields and <label> to label them. -->
+    
+    <form action="day3.html" method="get">
+        <!-- Enter Name:  -->
+        Name: <br>
+        <input type="text" name="username" id="abc"placeholder="Enter Name " value="Haaris"> <br> 
+        <!-- <label for="">Enter Password: </label> -->
+        Password: <br>
+        <input type="password" name="password"> <br> 
+        <label for="">Enter Email: <br> </label>
+        <input type="email" name="" id=""> <br> 
+        <label for="">Favorite Color: <br></label>
+        <input type="color" name="" id=""> <br> 
+        <label for="">Phone Number: <br></label>
+        <input type="number" name="" id=""> <br>
+        <label for="">Date of birth: <br></label>
+        <input type="datetime-local" name="" id=""> <br>
+        <!-- <input type="month" name="" id=""> -->
+        <!-- <input type="week" name="" id=""> -->
+        <!-- Radio Buttons -->
+        <!-- Out of all given options-> Only 1 select  -->
+        <label for="">Gender: <br></label>
+        <br> <input type="radio" name="radio" value="Male"> Male
+        <input type="radio" name="radio" value="Female"> Female <br> 
+        
+        <!-- Out of all given options, user can select multiple, even all of them -->
+        <label for="">Language(s): <br></label>
+        <input type="checkbox"  name="lang1" value="abc"> Malayali 
+        <input type="checkbox" name="lang2" value="123"> English 
+        <input type="checkbox" name="lang3" > Urdu 
+        <input type="checkbox" name="lang4" > Punjabi 
+        <input type="checkbox" name="lang5" > Marathi <br>
+
+        <!-- Dropdown list. To create a dropdown list, we use a <select> element, inside the select element, we put multiple options using the <option> element. -->
+        <label for="">Course: <br></label>
+        <select name="course" id="">
+            <option value="ABC">B.Sc IT</option>
+            <option value="M.sc IT">M.Sc IT</option>
+            <option value="MCA">MCA</option>
+            <option value="BCA">BCA</option>
+            <option value="BBA">BBA</option>
+            <option value="MBA">MBA</option>
+            <option value="M.Comm.">M.Comm.</option>
+            <option value="B.Comm.">B.Comm.</option>
+        </select> <br>
+
+        <label for="">Upload Image: </label>
+        <input type="file" name="" id="">
+        <br><input type="submit" value="Login">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html> 
+
+<!-- Label -> Label is kind of a tag that you put on any input field to specify to the user what exact type of input we are looking for.  -->
+

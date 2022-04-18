@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - More with flexbox and Media Queries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 70px;
+            width: 100%;
+            background-color: rgb(36, 36, 36);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+
+        .left {
+            display: flex;
+        }
+
+        .left>* {
+            margin: auto 10px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            padding: 10px;
+        }
+
+        .logo {
+            font-size: 2.5em;
+        }
+
+        button {
+            padding: 6px 15px;
+            background-color: aquamarine;
+            border-radius: 15px;
+        }
+
+        .header2 .left {
+            order: 1;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            background-color: antiquewhite;
+        }
+
+        .box {
+            height: 300px;
+            width: 100%;
+            margin: 10px;
+            background-color: blueviolet;
+            font-size: 2em;
+            color: white;
+            display: none;
+        }
+
+        @media (max-width:400px) {
+            #box1 {
+                background-color: yellow;
+                display: block;
+            }
+        }
+
+        @media (min-width:401px) and (max-width:900px) {
+            #box2 {
+                background-color: aqua;
+                display: block;
+            }
+        }
+
+        @media (min-width:901px) and (max-width:1500px) {
+            #box3 {
+                background-color: violet;
+                display: block;
+            }
+        }
+
+        @media (min-width:1500px) {
+            #box4 {
+                background-color: red;
+                display: block;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- <header>
+        <div class="left">
+            <nav>
+                <ul>
+                    <li>Services</li>
+                    <li>Projects</li>
+                    <li>About</li>
+                </ul>
+            </nav>
+            <div class="btn">
+                <button>Contact</button>
+            </div>
+        </div>
+        <div class="logo">
+            LOGOBAKERY
+        </div>
+    </header> -->
+    <!-- <br> -->
+    <!-- <header class="header2">
+        <div class="left">
+            <nav>
+                <ul>
+                    <li>Services</li>
+                    <li>Projects</li>
+                    <li>About</li>
+                </ul>
+            </nav>
+            <div class="btn">
+                <button>Contact</button>
+            </div>
+        </div>
+        <div class="logo">
+            LOGOBAKERY
+        </div>
+    </header> -->
+
+    <!-- Media Queries -->
+
+    <div class="container">
+        <div class="box" id="box1">Mobile Screen</div>
+        <div class="box" id="box2">Tablet Screen</div>
+        <div class="box" id="box3">Laptop Screen</div>
+        <div class="box" id="box4">Wide Screen Monitors</div>
+    </div>
+</body>
+
+</html>

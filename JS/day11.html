@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Form Validations</title>
+</head>
+<body>
+    <form action="day1.html" onsubmit="return validate()">
+        <div>
+            <label for="">Enter Name: </label> <br>
+            <input type="text" name="" id="">
+        </div>
+
+        <!-- <div>
+            <label for="">Enter Password: </label> <br>
+            <input type="password" name="" id="">
+        </div> -->
+
+        <!-- <div>
+            <label for="">Enter Number: </label> <br>
+            <input type="number" name="" id="" min="0" max="1000">
+        </div> -->
+
+        <!-- <div>
+            <label for="">Enter Email: </label> <br>
+            <input type="email" name="" id="">
+        </div> -->
+        <input type="submit" value="Login">
+    </form>
+
+    <script>
+        function validate() {
+            var inp = document.getElementsByTagName("input")
+            let value = inp[0].value
+            if (value.length <= 0) {
+                return false
+            }
+            else if(value == "Haaris"){
+                return true
+            }
+            else {
+                return false
+            }
+        }
+
+        // Regular Expressions - Complex search string patterns - 
+
+        // Regular expression functions
+
+        // let str = "This is Larry"
+        // let regEx = /Larry/ 
+
+        // exec() - returns the match array in case of match and null in case of no match 
+
+        // test - returns true in case of match and false in case of no match
+
+        // search - Returns the index number in case of match and -1 in case of no match 
+
+        // match() - returns true in case of match and false in case of no match
+        
+        // let result = regEx.exec(str)
+        // let result = regEx.test(str)
+        // let result = str.search(regEx)
+        // console.log(result);
+
+
+
+        // Meta character symbols 
+        // cap (^) - Search for a character or group of characters in the beginning
+        // Dollar Sign ($) - Search in the end
+        // Dot(.) - Search for exact 1 character in place of dot
+        // Asterisk(*) - Search for any number of characters
+        // Question Mark(?) - Used to make a character as optional
+
+        // Character Sets - We use [] for character sets.
+        let str = "My name is harrry";
+        let regEx = /^Your/
+        regEx = /y$/
+        regEx = /ha?rry/
+        regEx = /h[abc]rry/
+        regEx = /h[a-z]rry/
+        regEx = /h[0-9]rry/
+        regEx = /h[a-z0-9!@#$%^&*]rry/
+        regEx = /h[^abc]rry/
+        regEx = /h[^a-z]rry/
+        regEx = /h[aA-zZ0-9]rry/
+        
+        // Quantifiers - We use {} to specify a qunatifier
+        regEx = /ha{2}rry/
+        regEx = /har{2}y/
+
+        str = "abcabc"
+        regEx = /cur{2}y/
+        regEx = /cu[a-z]{2}y/
+        regEx = /^[abc]{2}/     // Shivam
+        // regEx =/[a-c]{2}/       // Saurabh
+        // regEx =/[a-z]{2}/       // Sagar
+        regEx =/^(abc){2}$/       // HAARIS
+
+
+        // Grouping - We use () for grouping various characters together
+
+        // regEx = /cu(rr){3}y/
+        let result = regEx.test(str)
+        if (result) {
+            console.log("Condition Matched");
+            console.log(regEx.exec(str));
+        }
+        else {
+            console.log("Not found");
+        }
+
+        // Write a regular expression for name (Start with capital letter, length should be in between 3 to 20) and phone number(start with a number from 6 to 9, length should be 10 characters)
+
+</script>
+</body>
+</html>

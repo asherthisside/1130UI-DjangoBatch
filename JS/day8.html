@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Intro to DOM</title>
+</head>
+<body>
+    <h1 id="head">Welcome</h1>
+    <hr>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nisi quod debitis aliquam impedit, totam beatae? Pariatur repellat architecto quidem quis earum, omnis labore suscipit eveniet, ducimus explicabo ipsum est eaque, cum provident ex nesciunt ut saepe dolorem dicta dolore officia ipsa at commodi voluptatum! Nobis saepe perferendis molestiae voluptatum, doloremque deleniti, ducimus, soluta asperiores exercitationem quisquam ipsa ut tenetur. Tempora eos ipsum harum nulla, voluptates omnis obcaecati, facere fuga blanditiis sit autem debitis distinctio molestias ducimus deleniti unde accusamus iure dicta. Sequi, doloribus hic expedita quia ea voluptates molestiae assumenda accusantium deleniti, incidunt dignissimos. Deleniti cupiditate iure et laudantium!</p>
+    <ul>
+        <li class="list" id="li1">abc</li>
+        <li class="list" id="li2"><b>def</b></li>
+        <li class="list" id="li3">ghi</li>
+        <li class="list" id="li4">jkl</li>
+        <li class="list" id="li5">mno</li>
+    </ul>
+
+    <img src="../../images/Office.jpg" id="im1" alt="">
+    <img src="../../images/Office.jpg" id="im2" alt="">
+    <img src="../../images/Office.jpg" id="im3" alt="">
+    <script>
+        let multiobj = {
+            haaris: { 
+                name: 'Haaris', 
+                Address: 'Noida', 
+                'Phno.': 9645,
+                favGame : function() {
+                    return ["Modern Warfare, Cold war, Red dead redemption"]
+                }
+            },
+            'Akash': { 
+                'name': 'Akash', 
+                'Address': 'Noida', 
+                'Phno.': 9345,
+                marks: function() {
+                    return [12, 13, 15]
+                }
+            }
+        }
+
+        console.log(multiobj.Akash);
+
+        console.log(multiobj['haaris'].favGame());
+
+        // Objects and functions 
+
+        // Predefined objects 
+        // Document Object - Document Object Model (DOM)
+
+        /* 
+        1. To add new HTML/ to update the existing one
+        2. To add new HTML attributes/ to update the existing one
+        3. To add new CSS/ to update the existing one
+        */
+
+        // Event - driven programming
+
+        // Document Object - 
+        let d = document
+        console.log(d.scripts);
+    </script>
+
+    <script>
+        console.log("Hi there");
+
+        // 2 types of selector methods are there - 
+        // 1) Single selectors(getElementById(), querySelector()), 
+        // 2) Multiple selectors(getElementsByClassName(), getElementsByTagName(), getElementsByName(), and querySelectorAll())
+
+        // All methods are functions, but not all functions are methods (T/F) 
+
+        // let listItem = document.getElementById("li2")
+        // listItem = document.querySelector("meta")
+        // listItem = document.querySelector("#im3")
+        // console.log(listItem);
+
+        // Multiselectors
+        let images = document.getElementsByTagName("img")
+        images = document.getElementsByClassName("list")
+        console.log(images[4]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a header using flexbox</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0;
+        }
+
+        .container {
+            height: 200vh;
+            width: 100%;
+            background-color: wheat;
+        }
+
+        header {
+            height: 70px;
+            width: 100%;
+            background-color: rgb(36, 36, 36);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            margin-left: 20px;
+            font-size: 3em;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .btn {
+            margin-right: 20px;
+        }
+
+        .btn button {
+            background-color: rgb(4, 133, 167);
+            padding: 0.35em;
+            color: white;
+            border-radius: 1em;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">ASHER - X</div>
+            <nav>
+                <ul>
+                    <li>Services</li>
+                    <li>Projects</li>
+                    <li>About</li>
+                </ul>
+            </nav>
+            <div class="btn">
+                <button>Contact</button>
+            </div>
+        </header>
+    </div>
+
+    <input type="color" name="" id="">
+</body>
+
+</html>

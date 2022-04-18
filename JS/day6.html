@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /><title>JS - Functions</title>
+</head>
+
+<body>
+    <i class="fa-regular fa-alarm-plus"></i>
+    <script>
+        // What is a function?
+        // A bunch of code that works only when it is called.
+
+        // 2 types of functions - 1. Predefined functions and 2. User defined functions.
+
+        // function fn_name() {
+        // statements
+        // }
+
+        // fn_name()
+
+        function intro() {
+            console.log("Hi, I am John Doe")
+        }
+
+        // intro()
+
+        function oneToTen() {
+            for (let i = 0; i < 11; i++) {
+                console.log(i)
+            }
+        }
+
+        // oneToTen();
+
+        // Frameworks and Libraries 
+        // console.log("This is something else");
+        // oneToTen()
+        // intro()
+
+        function add() {
+            console.log(2 + 2);
+        }
+
+        // Parameters - Variables that are initialized at run time to make the function work accordingly.
+
+        function add2(a, b) {
+            console.log(a + b);
+        }
+
+        // add2(3, 5)
+        // add2(37, 54)
+        // add2(317, 574)
+
+        function add3(a, b, c = 3) {
+            let result = a + b + c
+            console.log(result)
+        }
+
+        // add3(3, 4)
+
+        // add3(23, 12 ,10)
+
+        // let n1 = parseInt(prompt("Enter 1st number"))
+        // let n2 = parseInt(prompt("Enter 2nd number"))
+        // let n3 = parseInt(prompt("Enter 3rd number"))
+
+        // add3(n1, n2, n3)
+
+
+        function message(name = "Stranger") {
+            console.log("Hi " + name + ", How are You?");
+        }
+
+        // message("Asher")
+        // message()
+        // message()
+        // message("Richa")
+
+        // Parameters and arguments - 
+
+        // Return statement 
+
+        // let sum = add3(10, 17)
+        // console.log("The value of sum is", sum);
+
+        function add4(a, b) {
+            return a + b
+        }
+
+        sum = add4(1, 2)
+        // console.log("The value of sum is", sum);
+
+
+        // Accept one number from the user and then return its cube, square and an even number next to it
+        let user_input = parseInt(prompt("Enter a number"))
+        function sq(a) {
+            return a ** 2
+        }
+
+        function cube(a) {
+            return a ** 3
+        }
+
+        function nextEven(a) {
+            let n1 = a + 1
+            if (n1 % 2 == 0) {
+                var evenNumber = n1
+            }
+            else {
+                evenNumber = a + 2
+            }
+            return evenNumber
+        }
+
+        console.log("Square:", sq(user_input))
+        console.log("Cube:", cube(user_input))
+        console.log("Next Even Number:", nextEven(user_input))
+    </script>
+</body>
+
+</html>

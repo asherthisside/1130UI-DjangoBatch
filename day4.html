@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Description lists</title>
+    <!-- SEO - Search Engine Optimization -->
+</head>
+
+<body>
+    <!-- Description(Definition) list -> Is a type of list. When we want to add some description to our list items. We use <dl> tag to create a description list, then <dt> to write title, and <dd> to write description. -->
+
+    <!-- List of beverages -->
+    <h1>Beverages</h1>
+    <dl>
+        <dt>
+            <h2>Tea</h2>
+        </dt>
+        <dd>
+            <!-- <p>Made with tea leaves. Tastes better when hot.</p>  -->
+            <ul>
+                <li>Made from tea leaves.</li>
+                <li>Milk is optional</li>
+                <li>Tastes better when hot.</li>
+            </ul>
+        </dd>
+
+        <dt>Coffee</dt>
+        <dd>Made from cocoa beans. Is served both hot and cold</dd>
+
+        <dt>Lassi</dt>
+        <dd>Made by curd. Tastes better when served cold.</dd>
+    </dl>
+
+    <!-- Table -> Rows and Columns. We use <table> tag to create a table, <tr> to create a row, <th> to create headings of column and <td> to put the data. <thead> and <tbody> -->
+
+    <table border="1" cellpadding="20" cellspacing="10">
+        <thead>
+            <tr>
+                <th>S. No</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>ABC</td>
+                <td>01</td>
+                <td>City 1</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>DEF</td>
+                <!-- <td>01</td>
+                <td>City 2</td> -->
+            </tr>
+
+            <tr>
+                <!-- <td>3</td> -->
+                <td>MNO</td>
+                <td>02</td>
+                <td>City 3</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Rowspan and colspan -->
+
+    <!-- <h3>Marks List</h3> -->
+    <table border="1" cellpadding="10">
+        <caption><h3>Marks List</h3></caption>
+        <tr>
+            <th rowspan="2">Name</th>
+            <th colspan="2">Marks</th>
+        </tr>
+
+        <tr>
+            <th>Subject 1</th>
+            <th>Subject 2</th>
+        </tr>
+
+        <tr>
+            <td>Shuaib</td>
+            <td>90</td>
+            <td>89</td>
+        </tr>
+    </table>
+</body>
+
+</html>
+
+<!-- Indentation -> When we use a tag inside the another, we leave some space(usually 1 tab). It increases the readability and is used to visualuze the parental hierarchy the HTML tags possess. -->
+
+<!-- Parent tag -> Child tags -->
+
+<!-- Notations -  -->
+<!-- My vacation pics folder  -->
+
+<!-- 
+    1. Camel case notation -> myVacationPicsFolder -> haarisSaifi
+    2. Kebab case notation -> my-vacation-pics-folder
+    3. Snake case notation -> my_vacation_pics_folder
+    4. Pascal case notation -> MyVacationPicsFolder 
+ -->

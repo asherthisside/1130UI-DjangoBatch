@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - List and Table Properties</title>
+    <style>
+        ul {
+            background-color: blueviolet;
+            width: 50%;
+            list-style: none;
+            list-style-type: armenian;
+            /* list-style-image: url('../../images/list_style_image.png'); */
+        }
+
+        li {
+            background-color: cadetblue;
+            margin: 10px;
+            list-style-position: inside;
+        }
+
+        table {
+            border: 5px solid cadetblue;
+            /* border-collapse: collapse; */
+            text-align: left;
+            width: 50%;
+        }
+        
+        td, th {
+            padding: 5px 30px 5px 5px;
+            font-size: 0.8em;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: darkgrey;
+        }
+        
+        tr:nth-child(odd) {
+            background-color: grey;
+        }
+
+        tr:first-child {
+            background-color: black;
+        }
+        
+        table button {
+            background-color: seagreen;
+            font-size: 0.8em;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+        <li>List item 5</li>
+    </ul> -->
+
+    <table>
+        <tr class="older-rows">
+            <th>Provider Name</th>
+            <th>E-mail</th>
+            <th></th>
+        </tr>
+
+        <tr>
+            <td>Mohtasham</td>
+            <td>md@gmail.com</td>
+            <td><button>Select</button></td>
+        </tr>
+
+        <tr>
+            <td>Kanhaiya</td>
+            <td>kn@gmail.com</td>
+            <td><button>Select</button></td>
+        </tr>
+        <tr>
+            <td>Ashish</td>
+            <td>as@gmail.com</td>
+            <td><button>Select</button></td>
+        </tr>
+        <tr>
+            <td>Shuaib</td>
+            <td>sb@gmail.com</td>
+            <td><button>Select</button></td>
+        </tr>
+        <tr>
+            <td>Shruti</td>
+            <td>sr@gmail.com</td>
+            <td><button>Select</button></td>
+        </tr>
+        <tr>
+            <td>Saurabh</td>
+            <td>100rab@gmail.com</td>
+            <td><button>Select</button></td>
+        </tr>
+        <tr>
+            <td>Deepanshu</td>
+            <td>dp@gmail.com</td>
+            <td><button>Select</button></td>
+        </tr>
+    </table>
+</body>
+</html>
+
+<!-- 
+    display: block;
+    width: fixed width
+    margin-right: auto
+    margin-left: auto
+ -->

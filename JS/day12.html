@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - More with Regular expression</title>
+</head>
+<body>
+    <script>
+        // let nameRegEx = /^[A-Z][a-z]{2,19}$/
+        // let name = "aqwertyuioplkjhgfdsa"
+        // let result = nameRegEx.test(name) 
+        // if(result) {
+        //     console.log("Name is correct");
+        // }
+        // else {
+        //     console.log("Incorrect name");
+        // }
+        // let phoneRegEx = /^[6-9][0-9]{9}$/
+        // let phone = "7634166040"
+        // let result = phoneRegEx.test(phone) 
+        // if(result) {
+        //     console.log("Phone number is correct");
+        // }
+        // else {
+        //     console.log("Incorrect Phone number");
+        // }
+
+        str = "This is HARRY. You know why he is called as HARRY because HARRY is the favourite character of HARRY"
+        regEx = /h\drry/        // Accept one numeric character
+        regEx = /h\d+rry/       // Accept more than one numeric character
+        regEx = /h\Drry/        // Accept anything but numeric character
+
+        regEx = /h\wrry/        // Accept one alphanumeric character or underscore
+        regEx = /h\w+rry/        // Accept more than one alphanumeric character or underscore
+        regEx = /h\W+rry/        // Accept anything alphanumeric character or underscore
+        
+        regEx = /h\srry/        // Accept one whitespace character 
+        regEx = /h\s+rry/        // Accept more than one whitespace character 
+        regEx = /h\Srry/        // Accept more than one whitespace character 
+
+        regEx = /harry\ssaifi/  
+        
+        // Flags -> 
+        regEx = /harry/i
+
+
+        let result =regEx.test(str)
+        if (result) {
+            // console.log("Match Found");
+            console.log(regEx.exec(str));
+        }
+        else {
+            console.log("No match found")
+        }
+    </script>
+</body>
+</html>

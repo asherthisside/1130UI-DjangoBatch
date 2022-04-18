@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(60deg, gray, white);
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .resume {
+            height: 90vh;
+            width: 40vw;
+            /* border: solid; */
+            display: flex;
+            box-shadow: -5px -3px 8px gray;
+        }
+
+        .left-part {
+            height: 100%;
+            width: 40%;
+            background-color: gold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0.5em;
+        }
+
+        .left-part>div {
+            margin: 1em auto;
+        }
+
+        .left-part .picture {
+            height: 30%;
+            width: 90%;
+            border: solid white;
+        }
+
+        .left-part .education h1, .left-part .references h1 {
+            font-size: 1.25em;
+            text-transform: uppercase;
+        }
+
+        .left-part .education>* {
+            margin: 0.5em auto;
+        }
+
+        .left-part h2,
+        .left-part h3{
+            font-size: 0.75em;
+            /* text-transform: uppercase; */
+        }
+
+        .left-part h3 {
+            color: gray;
+        }
+
+
+
+        .right-part {
+            height: 100%;
+            width: 60%;
+            background-color: white;
+            padding: 0.5em;
+        }
+
+        .right-part h1 {
+            text-transform: uppercase;
+        }
+
+        .right-part h3 {
+            text-transform: uppercase;
+            font-size: 0.75em;
+        }
+
+        .right-part .about-me p {
+            font-size: 0.6em;
+        }
+
+         .right-part .about-me h3 {
+            margin: 0.5em auto;
+        }
+
+        hr {
+            height: 0.5em;
+            background-color: gold;
+            border: navajowhite;
+            margin: 0.5em auto;
+        }
+
+        .work-experience h1, .skills h1 {
+            font-size: 1.25em;
+        }
+
+        .work-experience h2 {
+            font-size: 1em;
+            margin: 00.5em;
+        }
+
+        .work-experience h3 {
+            font-size: 00.75em;
+            color: gray;
+            margin: 00.25em;
+        }
+
+        .skills {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .skills .skill-sections {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .skills > * {
+            margin: 0.5em;
+        }
+
+        section {
+            width: 45%;
+            /* background-color: black; */
+        }
+
+        section progress {
+            width: 90%;
+            height: 1em;
+            background-color: gray;
+        }
+
+        section > * {
+            margin: 0.25em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="resume">
+            <div class="left-part">
+                <div class="picture">
+                    <img src="../../Bootstrap/Project/images/card4.jpg" alt="" height="100%" width="100%">
+                </div>
+                <div class="education">
+                    <div class="mba">
+                        <h1>Education</h1>
+                        <h2>Masters in Business Administration</h2>
+                        <h3>Jan 2015 - Dec 2018</h3>
+                        <h3>University of New York - USA</h3>
+                    </div>
+                    <div class="bba">
+                        <h2>Bachelor's in Business Administration</h2>
+                        <h3>Jan 2011 - Dec 2014</h3>
+                        <h3>University of New York - USA</h3>
+                    </div>
+                </div>
+                <div class="references">
+                    <h1>references</h1>
+                    <h2>Mr. James Coleman</h2>
+                    <h3>Chief Engineer, Mint Technologies</h3>
+                </div>
+            </div>
+            <div class="right-part">
+                <div class="about-me">
+                    <h1>Nathan Jones</h1>
+                    <h3>Marketing Manager</h3>
+                    <h3>About Me</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed neque ducimus labore, laboriosam officiis veniam non corporis! Officiis quisquam facilis ullam unde perspiciatis nemo cupiditate hic cumque dignissimos iste. Eaque atque tempore enim quisquam, fugit iure ullam veniam dolores voluptates ipsa incidunt, laboriosam libero. Tempora natus ipsam distinctio sunt molestiae.</p>
+                </div>
+                <hr>
+                <div class="work-experience">
+                    <h1>Work Experience</h1>
+                    <h2>Senior Manager</h2>
+                    <h3>LEO Company, Paris, France</h3>
+
+                    <h2>Senior Manager</h2>
+                    <h3>LEO Company, Paris, France</h3>
+                </div>
+                <hr>
+                <div class="skills">
+                    <h1>SKILLS</h1>
+                    <div class="skill-sections">
+                        <section>
+                            <h3>HTML/CSS</h3>
+                            <progress value="70" max="100"></progress>
+                            <h3>PHP/WordPress</h3>
+                            <progress value="60" max="100"></progress>
+                        </section>
+                        <section>
+                            <h3>HTML/CSS</h3>
+                            <progress value="70" max="100"></progress>
+                            <h3>PHP/WordPress</h3>
+                            <progress value="60" max="100"></progress>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

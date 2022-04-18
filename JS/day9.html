@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Day 9</title>
+</head>
+<body>
+    <h1 id="head">Welcome</h1>
+    <hr>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nisi quod debitis aliquam impedit, totam beatae? Pariatur repellat architecto quidem quis earum, omnis labore suscipit eveniet, ducimus explicabo ipsum est eaque, cum provident ex nesciunt ut saepe dolorem dicta dolore officia ipsa at commodi voluptatum! Nobis saepe perferendis molestiae voluptatum, doloremque deleniti, ducimus, soluta asperiores exercitationem quisquam ipsa ut tenetur. Tempora eos ipsum harum nulla, voluptates omnis obcaecati, facere fuga blanditiis sit autem debitis distinctio molestias ducimus deleniti unde accusamus iure dicta. Sequi, doloribus hic expedita quia ea voluptates molestiae assumenda accusantium deleniti, incidunt dignissimos. Deleniti cupiditate iure et laudantium!</p>
+    <ul>
+        <li class="list" id="li1">abc</li>
+        <li class="list" id="li2"><b>def</b></li>
+        <li class="list" id="li3">ghi</li>
+        <li class="list" id="li4">jkl</li>
+        <li class="list" id="li5">mno</li>
+    </ul>
+
+    <img src="../../images/Office.jpg" id="im1" alt="">
+    <img src="../../images/Office.jpg" id="im2" alt="">
+    <img src="../../images/Office.jpg" id="im3" alt="">
+    
+    <button id="btn" onclick="f1()" onmouseover="f2()" onmouseout="f3()">Click here for table</button>
+
+    <p id="p2"></p>
+
+    <script>
+        function f1() {
+            let num1 = parseInt(prompt("Enter a number"))
+            for(let i = 0; i <= 10; i++) {
+                console.log(num1 + " * " + i + " = " + num1 * i);
+            }
+        }
+
+        function f2() {
+            let btn = document.getElementById("btn")
+            btn.style.backgroundColor = "red"
+        }
+
+        function f3() {
+            let btn = document.getElementById("btn")
+            btn.style.backgroundColor = "white"
+        }
+        let d = document;
+        // console.log(d);
+
+        // createElement - Used to create the HTML elements
+        let newelement = document.createElement("li")
+        newelement.id = "NewID"
+        newelement.className = "class1"
+        newelement.classList.add('class2')
+        // newelement.classList.remove('class1')
+        newelement.innerText = "This is new Listitem"
+        // console.log(newelement.innerText)
+        // console.log(newelement);
+
+
+        // Appending this new listitem to HTML list
+        let htmlul = document.querySelector("ul")
+        // console.log(htmlul);
+        htmlul.appendChild(newelement)
+
+        let data = "A group, in mathematics, is a set together with an operation that combines any two of its elements to form a third element, in such a way that the operation is associative, an identity element exists, and every element has an inverse. These three conditions, called group axioms, are familiar from number systems. The ubiquity of groups in numerous areas—both within and outside mathematics—makes them a central organizational tool in contemporary mathematics. The concept of a group arose from the study of polynomial equations, starting with Évariste Galois in the 1830s. After contributions from other fields such as number theory and geometry, the group notion was generalized and firmly established around 1870."
+        let text = document.createTextNode(data)
+        // console.log(text);
+
+        let para = document.getElementById("p2")
+        console.log(para);
+        para.appendChild(text)
+
+        // Remove child 
+        let toBeRemoved = document.getElementById("li5")
+        htmlul.removeChild(toBeRemoved)
+
+        let toBeReplaced = document.getElementById("li3")
+        htmlul.replaceChild(newelement, toBeReplaced)
+
+
+        // Events -> 
+        /* 
+        1. Keyboard Events - 
+        2. Mouse Events - 
+        3. Window Events - 
+        */
+
+        // Event driven programming (Event Handling)
+
+        // 2 ways for event handling 
+        /* 
+        1. HTML has global attributes for each Event
+        2. With the help of JS' addEventListener
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - DOM(Revision)</title>
+</head>
+<body>
+    <h1>Welcome to JS DOM</h1>
+    <!-- DOM ?? -->
+    <button onclick="message()">Click here</button>
+    <button id="btn">Button2</button>
+    <img src="../../images/Office.jpg" alt="">
+    <img src="../../images/Office.jpg" alt="">
+    <script>
+        function message() {
+            alert("How dare you?")
+        }
+
+        // let btn = document.getElementById("btn")
+        let btn = document.querySelector("#btn")
+        btn.addEventListener("click", function() {
+            let d = document
+            // document.style.backgroundColor = "red"
+            document.images[0].style.width = "200px"
+            document.images[0].style.borderRadius = "50%"
+        })
+
+        // let d = document;
+        // console.log(d);
+        let head = document.querySelector("h1")
+        console.log(head);
+        head.innerHTML = "<i>The text has now changed</i>";
+
+        let para = document.createElement("p")
+        let text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum eum quisquam repellendus et corrupti minima alias nam error reiciendis commodi amet, unde eveniet explicabo iure dicta eius iusto? Suscipit soluta tempora veniam! Esse, perspiciatis fuga deserunt quod, id velit quo eius perferendis veniam deleniti dolores dolore dignissimos, nemo ducimus eveniet error! Autem illum pariatur in harum similique dolores enim deserunt consequuntur impedit architecto quis molestias saepe quas nulla laborum repudiandae expedita, fugiat qui. Quos fugit perspiciatis doloribus. Quas explicabo, libero cupiditate recusandae nemo possimus? Doloremque, animi? Harum ducimus accusamus ipsum aspernatur, voluptate ipsa commodi tempore deleniti quibusdam. Deserunt, aliquam fuga?"
+        para.innerHTML = text
+        para.title = "This is a paragraph"
+        para.id = "new_para"
+        para.className = "new_class"
+        para.classList.add("another_class")
+        para.classList.remove("new_class")
+        console.log(para);
+        para.style.fontStyle = "Italic"
+        para.style.backgroundColor = "Skyblue"
+        para.style.color = "white"
+        para.style.textShadow = "2px 2px 5px black"
+        document.body.appendChild(para)
+
+        function changeTitle() {
+            para.title = "Title has been changed. Now the title is 'NEW PARAGRAPH'";
+        }
+
+        changeTitle()
+
+        // Event-driven 
+        // 2 ways - 
+        // How do you handle the events that are taking place on your website? 
+    </script>
+</body>
+</html>

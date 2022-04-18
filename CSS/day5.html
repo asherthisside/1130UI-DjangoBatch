@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Semantic tags | CSS - Display and Position properties</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        h1 {
+            display: inline;
+        }
+
+        .sp {
+            display: block;
+            background-color: red;
+            margin-top: 10px;
+            font-size: 2em;
+            color: white;
+            height: 200px;
+        } 
+
+        .spans {
+            background-color: yellow;
+        }
+
+        #sp1 {
+            display: inline;
+            height: 200px;
+            width: 200px;
+        }
+
+        #sp2 {
+            display: block;
+            height: 200px;
+            width: 200px;
+        }
+
+        #sp3 {
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+        }
+
+        nav {
+            background-color: rgb(187, 187, 243);
+            height: 80px;
+            width: 100%;
+        }
+
+        li {
+            display: inline-block;
+            border: 2px solid red;
+            color: red;
+            font-size: 1.5em;
+            padding: 10px;
+            text-transform: uppercase;
+            margin: 15px 20px;
+        }
+
+        .box {
+            background-color: cornflowerblue;
+            position: relative;
+            width: 100%;
+            height: 200vh;
+            border: solid;
+        }
+
+        .items {
+            height: 100px;
+            width: 150px;
+            background-color: crimson;
+            color: white;
+            font-size: 1.35em;
+            display: inline-block;
+            border: solid;
+        }
+
+        #item1 {
+            position: static;
+        }
+
+        #item2 {
+            position: relative;
+            top: 20px;
+            /* left: -50px; */
+            /* bottom: 0px; */
+            /* right: 0; */
+        }
+
+        #item3 {
+            background-color: tomato;
+            position: absolute;
+            top: 20px;
+            /* left: 0px; */
+            /* bottom: 0; */
+            /* right: 0; */
+        }
+
+        #item4 {
+            background-color: yellow;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
+
+        #item5 {
+            background-color: maroon;
+            position: sticky;
+            top: 0;
+            margin-top: 30px;
+        }
+
+        header {
+            height: 80px;
+            background-color: mediumaquamarine;
+            width: 100%;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 2.5em;
+            position: absolute;
+            left: 10px;
+            line-height: 80px;
+        }
+
+        .title {
+            position: absolute;
+            left: 35%;
+            top: 33%;
+            font-size: 1.5em;
+        }
+
+        .cta {
+            position: absolute;
+            right: 10px;
+            top: 33%;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>This is a heading</h1> -->
+    <!-- <h1>This is another heading</h1> -->
+    <!-- <p>This is a paragraph. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi molestiae saepe voluptatibus odit natus aspernatur ea, voluptates eius quod quisquam fugiat laborum, magnam aut consequatur explicabo neque pariatur sed libero voluptatem possimus excepturi accusantium. Atque amet quod, alias quas odit delectus nulla libero quam, dicta fugiat blanditiis! Esse, ex nostrum.</p> -->
+    <!-- <span class="sp">Span 1</span> -->
+    <!-- <span class="sp">Span 2</span> -->
+
+    <!-- <img src="../../images/test1.png" alt=""> -->
+    <!-- 
+        1. Inline - No height and width can be used
+        2. Block - Line change
+     -->
+     
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab consequuntur eligendi voluptate corrupti similique aliquid iure, aperiam magni sequi nobis cumque temporibus ipsa accusantium vero tempore cum error provident doloremque corporis esse <span class="spans" id="sp1">Span 1</span> fugiat nostrum! Eos esse iusto in dicta laudantium, consequatur totam culpa vitae delectus dolore dignissimos quaerat voluptatibus, cumque numquam itaque asperiores accusantium placeat, fuga nihil voluptas officiis. Illum odit repellendus ut id veritatis reiciendis, nisi eaque ex, et voluptates tempora similique veniam nesciunt atque autem quo animi <span class="spans" id="sp2">Span 2</span> fugiat laboriosam sequi! Quam laboriosam, deleniti sequi libero neque, reiciendis distinctio hic temporibus tenetur, quod doloribus adipisci molestias unde minima architecto nemo rerum dolore in? Sit ratione, quos minus soluta ea quibusdam laudantium. Culpa explicabo corrupti nam perferendis dignissimos deserunt, architecto delectus esse. Et illo perferendis, aperiam ea voluptatibus illum eum autem quo quam. Exercitationem <span class="spans" id="sp3">Span 3</span> aperiam quia eligendi corporis quasi ex odit ipsa voluptate quo doloremque obcaecati soluta accusantium sed atque dolores nobis, beatae officia praesentium deleniti, quibusdam ad optio quis minus. Molestias dolore dolores illum ipsa corporis eius temporibus ducimus dicta maxime expedita voluptate qui odit autem voluptates corrupti debitis aspernatur ratione natus doloremque, neque itaque recusandae provident quis. Quibusdam pariatur quam quas placeat optio numquam rerum in, ratione at?</p> -->
+
+    <!-- <nav>
+        <ul>
+            <li>HOME</li>
+            <li>About Us</li>
+            <li>Products</li>
+            <li>Feedback</li>
+            <li>Contact</li>
+        </ul>
+    </nav> -->
+
+    <!-- Position properties - Static | Relative | Absolute | Fixed | Sticky -->
+    <!-- <div class="box">
+        <div class="items" id="item1">1</div>
+        <div class="items" id="item2">2</div>
+        <div class="items" id="item3">3</div>
+        <div class="items" id="item4">4</div>
+        <div class="items" id="item5">5</div>
+    </div> -->
+
+    <header>
+        <div class="logo">ASHER-X</div>
+        <div class="title">www.abcdefghi.com</div>
+        <div class="cta">
+            <button class="btn" id="btn1">Login</button>
+            <button class="btn" id="btn2">SignUp</button>
+        </div>
+    </header>
+
+    <!-- Combinators, Pseudo classes and Pseudo Elements -->
+
+    <details>
+        <summary>Click Here to see details</summary>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, quo voluptas est, perferendis doloremque maiores incidunt illo optio sequi consequuntur atque, odio alias officia quisquam consectetur ipsa error repellendus aperiam impedit quis ducimus corporis. Eius maxime harum quia, animi accusamus totam autem magni soluta, architecto id amet sequi quae! Itaque!
+    </details>
+</body>
+</html>

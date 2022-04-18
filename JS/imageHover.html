@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container img {
+            height: 200px;
+            margin: auto 10px;
+            border: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="../../images/Office.jpg" alt="">
+        <img src="../../images/Office.jpg" alt="">
+        <img src="../../images/Office.jpg" alt="">
+    </div>
+    <script>
+        let images = document.querySelectorAll("img")
+        for (img of images) {
+            // console.log(img);
+            img.addEventListener("mouseover", ()=> {
+                // alert("Hi")
+                img.style.borderRadius = "50%"
+            })
+
+            img.addEventListener("mouseout", ()=> {
+                // alert("Hi")
+                img.style.borderRadius = "0%"
+            })
+        }
+    </script>
+</body>
+
+</html>

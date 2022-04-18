@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Conditional statements</title>
+</head>
+<body>
+    <script>
+        // Write a program to take 2 numbers from the user. Then confirm from the user if he wants to add them, if the answer is yes, add the numbers or else print them as they are. 
+        // let n1 = parseFloat(prompt("Enter a number"))
+        // let n2 = parseFloat(prompt("Enter another number"))
+
+        // let choice = confirm("Do you want to add these numbers")
+        // let sum = n1 + n2
+        // if(choice) {
+        //     console.log("The addition of " + n1 + " and " + n2 + " is " + sum);
+        // }
+        // else {
+        //     console.log(n1, n2);
+        // }
+
+
+        // If-else if ladder
+        let a = 56
+        if (a > 100) {
+            console.log("Con 1 - a is greater than 100");
+        }
+        else if(a > 80){
+            console.log("Con 2 - a is greater than 80");
+        }
+        else if (a > 60) {
+            console.log("Con 3 - a is greater than 60");
+        }
+        else if (a > 40) {
+            console.log("Con 4 - a is greater than 40");
+        }
+        else {
+            console.log("False - a is smaller than 40");
+        }
+        
+        // Nested if else
+        let b = 63
+        if(b > 15) {
+            console.log("1 - b is greater than 15");
+            if (b > 40) {
+                console.log("2 - b is greater than 40");
+                if (b > 60) {
+                    console.log("3 - b is greater than 60");
+                }
+                else {
+                    console.log("3 is false");
+                }
+            }
+
+            else {
+                console.log("2 is false");
+            }
+        }
+        else {
+            console.log("Con1 is false");
+        }
+
+        // Write a program to take 3 numbers, then print which one is greatest, smallest and which one lies in between.
+
+        // Write a JavaScript conditional statement to sort three numbers(entered by user).
+        // Display an alert box to show the result.
+        // Sample numbers : 0, -1, 4
+        // Output : 4, 0, -1
+
+        let num1 = 13
+        let num2 = 74
+        let num3 = 67
+
+        let greatest = 0
+        let smallest = 0
+        let middle = 0
+        if(num1 > num2 && num1 > num3) {
+            // console.log(num1 + " is the biggest number");
+            greatest = num1;
+            if (num2 > num3) {
+                console.log(num2 + " is in between");
+                console.log(num3 + " is smallest");
+            }
+            else {
+                console.log(num3 + " is in between");
+                console.log(num2 + " is smallest");
+            }
+        }
+
+        else if (num2 > num1 && num2 > num3) {
+            console.log(num2 + " is the biggest number");
+            if (num1 > num3) {
+                console.log(num1 + " is in between");
+                console.log(num3 + " is smallest");
+            }
+            else {
+                console.log(num3 + " is in between");
+                console.log(num1 + " is smallest");
+            }
+        }
+
+        else if (num3 > num1 && num3 > num2) {
+            console.log(num3 + " is the biggest number");
+            if (num1 > num2) {
+                console.log(num1 + " is in between");
+                console.log(num2 + " is smallest");
+            }
+            else {
+                console.log(num2 + " is in between");
+                console.log(num1 + " is smallest");
+            }
+        }
+        console.log(greatest, middle, smallest);
+    </script>
+</body>
+</html>

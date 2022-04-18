@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation bar using grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 200vh;
+            width: 100%;
+            background-color: chartreuse;
+        }
+
+        header {
+            min-height: 80px;
+            /* border: solid; */
+            background-color: black;
+            color: white; 
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 3fr;
+            gap: 10px;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 2.5em;
+        }
+
+        nav {
+            justify-self: flex-end;
+        }
+
+        nav ul li {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 5px;
+            transition: all .75s;
+        }
+        
+        nav ul li:hover {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        @media (max-width:800px) {
+            header {
+                grid-template-rows: repeat(2, 1fr);
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+
+            nav {
+                justify-self: inherit;
+            }
+        }
+
+        .circle {
+            margin: 10px;
+            height: 300px;
+            width: 300px;
+            border: solid;
+            border-radius: 50%;
+        }
+
+        .extra {
+            background-color: white;
+            border: solid;
+            height: 300px;
+            width: 300px;
+            margin: 50px;
+            /* transform: translateX(300px); */
+            /* transform: translateX(-100px); */
+            /* transform: translateY(400px); */
+            /* transform: translateY(-100px); */
+
+            /* transform: rotateX(180deg); */
+            /* transform: rotateY(180deg); */
+
+            /* Transitions */
+            /* transition-property: width, background-color;
+            transition-duration: 2s;
+            transition-delay: 1s; */
+            transition: transform 1s, background-color 3s, border-style 5s;
+            transition: all .5s;
+            /* transform-origin: top; */
+        }
+
+        .extra:hover {
+            /* transform: rotateY(720deg); */
+            /* transform: translateX(200px); */
+            /* transform: scaleY(1.5); */
+            transform: skewX(-30deg);
+            transform: skewY(-30deg);
+            /* background-color: red;
+            width: 500px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">ASHER - X</div>
+            <nav>
+                <ul>
+                    <li>HOME</li>
+                    <li>ABOUT US</li>
+                    <li>CONTACT</li>
+                    <li>PRODUCTS</li>
+                    <li>SERVICES</li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="circle"></div>
+        <div class="triangle"></div>
+        <!-- Transforms -->
+        <div class="extra">EXTRA CLASS</div>
+    </div>
+
+</body>
+
+</html>

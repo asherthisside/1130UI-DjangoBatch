@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators, Pseudo Classes and Pseudo Elements</title>
+    <style>
+        #head1 {
+            background-color: red;
+        }
+
+        /* h1 {
+            color: white;
+        } */
+
+        .head {
+            font-size: 1.5em;
+        }
+
+        /* h1.head {
+            background-color: violet;
+        } */
+
+        /* h1#head1 {
+            background-color: chartreuse;
+        } */
+        /* Specificity -  */
+        p {
+            /* background-color: red; */
+        }
+
+        /* div h1, div p, span, .head b {
+            background-color: black;
+            color: white;
+            font-size: 1.5em;
+        } */
+
+        /* div > p {
+            background-color: skyblue;
+        } */
+
+        div ~ h1 {
+            background-color: teal;
+        }
+
+        .head {
+            background-color: yellow;
+        }
+
+        nav.navigation ul li {
+            background-color: black;
+            background-color: red;
+            color: white;
+            margin: 10px;
+        }
+
+        #random {
+            background-color: blue;
+        }
+
+        a {
+            margin-top: 10px;
+            background-color: red;
+            border: solid;
+            padding: 0.75em 1.5em;
+            border-radius: 0.5em;
+            color: black;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+        
+        a:link {
+
+        }
+
+        a:hover {
+            background-color: white;
+        }
+
+        h1#hvr:hover {
+            background-color: violet;
+            color: red;
+            font-size: 3em;
+        }
+
+        a:active {
+            background-color: blue;
+            color: white;
+        }
+
+        table {
+            /* border: 1px solid black; */
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border-bottom: 1px solid black;
+            padding: 5px 15px;
+        }
+
+        tr:first-child {
+            background-color: rgb(148, 146, 146);
+        }
+
+        tr:nth-child(even) {
+            background-color: black;
+            color: white;
+        }
+
+        #para1 {
+            background-color: blanchedalmond;
+        }
+
+        /* #para1::before {
+            content: "Please Ready this Carefully";
+            font-size: 30px;
+            background-color: brown;
+            color: blanchedalmond;
+        } */
+
+        /* #para1::after {
+            content: "Was this helpful ?";
+            font-size: 30px;
+            background-color: brown;
+            color: blanchedalmond;
+        } */
+
+        #para1::first-letter {
+            font-size: 30px;
+        }
+
+        #para1::first-line {
+            font-style: italic;
+        }
+
+        #para1::selection {
+            background-color: lightgreen;
+            color: darkgreen;
+        }
+
+        ::marker {
+            font-size: 40px;
+        }
+        /* All the other pseudo - classes */
+    </style>
+</head>
+<body>
+    <!-- Combinators - Selectors -->
+    <!-- <h1>This is a heading</h1>
+    <h1 class="head">This is 2nd heading</h1>
+    <h1 class="head" id="head1">This is 3rd heading</h1> -->
+
+    <!-- Descendant Selector (space( )) -> div p (Selects all the paragrpah elements inside the div) -->
+    <!-- Child Selector (>) -> -> div > p (Selects all the paragrpah elements that are the direct children of the div) -->
+    <!-- adjacent sibling selector (+) -> div + p (Selects the paragrpah element that appears next to the div in hierarchy) -->
+    <!-- general sibling selector (~) -> div ~ p (Selects all the paragrpah element that appear next to the div in hierarchy)-->
+
+    <!-- <p>1. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum distinctio illo obcaecati iste quas deserunt perferendis, sequi quidem sitdelectus!</p> -->
+    <!-- <p>2. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum distinctio illo obcaecati iste quas deserunt perferendis, sequi quidem sitdelectus!</p> -->
+    <!-- <p>3. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum distinctio illo obcaecati iste quas deserunt perferendis, sequi quidem sitdelectus!</p> -->
+    <div>
+        <!-- <p>4. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, rerum molestiae. Laborum, quo architecto illo illum sequi iure alias reiciendis.</p> -->
+        <!-- <p>5. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt repellendus ipsam vitae aperiam maxime sed velit ipsum expedita accusantium.</p> -->
+        <section>
+            <!-- <p>6. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi ratione corporis dolore quibusdam laborum ab vel cupiditate labore id architecto!</p> -->
+        </section>
+        <!-- <p>7. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores necessitatibus dignissimos doloremque dicta nesciunt at molestiae soluta ea illum laudantium.</p> -->
+        <!-- <p>8. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores necessitatibus dignissimos doloremque dicta nesciunt at molestiae soluta ea illum laudantium.</p> -->
+    </div>
+    <!-- <p>9. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores necessitatibus dignissimos doloremque dicta nesciunt at molestiae soluta ea illum laudantium.</p> -->
+    <!-- <p>10. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores necessitatibus dignissimos doloremque dicta nesciunt at molestiae soluta ea illum laudantium.</p> -->
+    <!-- <h1 id="h1" class="head">This is 2nd heading</h1>
+    <h1 class="head">This is 3rd heading</h1>
+    <h1 class="head">This is 4th heading</h1>
+    <h1 class="head">This is 5th heading</h1>
+    <h1 class="head">This is 6th heading</h1> -->
+
+    <ol>
+        <li>123</li>
+        <li>456</li>
+        <li>789</li>
+    </ol>
+    <!-- <nav class="navigation">
+        <ul>
+            <li>ABC</li>
+            <li>DEF</li>
+            <li id="random">GHI</li>
+            <li>JKL</li>
+            <li>MNO</li>
+        </ul>
+    </nav> -->
+
+    <!-- <nav>
+        <ul>
+            <li>ABC</li>
+            <li>DEF</li>
+            <li>GHI</li>
+            <li>JKL</li>
+            <li>MNO</li>
+        </ul>
+    </nav> -->
+
+    <br> <br> <br>
+    <!-- Pseudo Classes -> Conditions -->
+    <!-- Pseudo - Elements - Different parts -->
+    <!-- <h1 id="hvr">This is hvr</h1> -->
+    <!-- <a href="day5.html">Click Here</a> -->
+    <!-- <table>
+        <tr>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Address</th>
+        </tr>
+
+        <tr>
+            <td>ABC</td>
+            <td>12</td>
+            <td>Noida</td>
+        </tr>
+
+        <tr>
+            <td>DEF</td>
+            <td>2</td>
+            <td>Noida</td>
+        </tr>
+
+        <tr>
+            <td>GHI</td>
+            <td>4</td>
+            <td>Noida</td>
+        </tr>
+    </table> -->
+
+    <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, laborum unde. Excepturi sint voluptatem amet eos perspiciatis quos vitae beatae, tenetur sequi nam, accusantium non. Aspernatur harum praesentium explicabo earum minima numquam magnam quod at eveniet, deserunt necessitatibus iure dolorum adipisci, consequatur quos incidunt beatae exercitationem tenetur nostrum dicta? Non quia consequatur eveniet dolorem. Quae culpa earum nobis molestias voluptatibus quo minima, dolores veniam odit. Vitae, aliquam praesentium! Iure, eaque corporis ex in maxime consequuntur quis perspiciatis. Modi architecto, maxime quo quis officiis ab facere nostrum quaerat fugiat ut harum blanditiis rem obcaecati, minus aliquid ipsum excepturi numquam, eos quasi?</p>
+    <input type="text" name="" id="" placeholder="Enter Name">
+    <input type="number" name="" id="">
+    <input type="checkbox" name="" id="">
+</body>
+</html>

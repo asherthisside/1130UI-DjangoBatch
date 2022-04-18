@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Layout with grid</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            background-color: aliceblue;
+            display: grid;
+            grid-template-rows: 80px 1fr 80px;
+            grid-template-columns: 1fr 2fr 5fr;
+            gap: 10px;
+        }
+
+        .container > * {
+            background-color: blue;
+        }
+
+        aside {
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo"></div>
+        <nav></nav>
+        <aside></aside>
+        <main></main>
+        <footer></footer>
+    </div>
+</body>
+</html>

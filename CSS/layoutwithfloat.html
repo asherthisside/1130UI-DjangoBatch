@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Layout with Float</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            height: 200vh;
+            background-color: lightgreen;
+        }
+
+        header {
+            width: 100%;
+            min-height: 80px;
+            background-color: lightpink;
+        }
+
+        header .logo {
+            float: left;
+            font-size: 3em;
+            line-height: 80px;
+        }
+
+        header .btns {
+            float: right;
+        }
+
+        header .site_title {
+            width: 30%;
+            font-size: 1.5em;
+            margin: auto;
+            /* border: 2px solid black; */
+            text-align: center;
+        }
+
+        nav {
+            width: 100%;
+            min-height: 80px;
+            background-color: lightpink;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            padding: 20px;
+            margin: 10px 70px;
+            /* border: solid; */
+            text-decoration: underline;
+        }
+
+        .main {
+            /* border: solid; */
+            background-color: lightpink;
+            width: 100%;
+            height: 155vh;
+            margin-top: 10px;
+        }
+
+        .main .left-part {
+            float: left;
+            width: 30%;
+            margin: 10px;
+            /* border: solid; */
+            height: 98%;
+            background-color: lightgreen;
+        }
+        
+        .left-part aside {
+            height: 98%;
+            width: 95%;
+            background-color: lightpink;
+            margin: 10px;
+        }
+        .main .right-part {
+            float: right;
+            width: 65%;
+            margin: 10px;
+            /* border: solid; */
+            height: 98%;
+            background-color: lightgreen;
+        }
+        
+        .right-part main {
+            height: 48%;
+            margin: 10px;
+            background-color: lightpink;
+            /* border: solid; */
+        }
+
+        section {
+            background-color: lightpink;
+            width: 47%;
+            margin: 10px;
+            /* border: solid; */
+            height: 48%;
+        }
+
+        section#s1 {
+            float: left;
+        }
+        section#s2 {
+            float: right;
+        }
+
+        footer {
+            clear: both;
+            width: 100%;
+            min-height: 80px;
+            background-color: lightpink;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">ASHER - X</div>
+            <div class="site_title">site_title</div>
+            <div class="btns">
+                <button>Login</button> <br>
+                <button>Sign Up</button>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Products</li>
+                <li>Feedback</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+
+        <div class="main">
+            <div class="left-part">
+                <aside></aside>
+            </div>
+            <div class="right-part">
+                <main></main>
+                <section id="s1">1</section>
+                <section id="s2">2</section>
+            </div>
+        </div>
+
+        <footer></footer>
+    </div>
+</body>
+</html>

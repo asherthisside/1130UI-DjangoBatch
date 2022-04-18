@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Animations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .text-animation {
+            height: 500px;
+            width: 500px;
+            border: solid;
+            position: relative;
+            overflow: hidden;
+        }
+
+        p {
+            position: absolute;
+            background-color: chartreuse;
+            /* bottom: 0; */
+            /* display: none; */
+            transition: all .5s;
+            /* opacity: 0; */
+        }
+
+        .text-animation:hover p {
+            opacity: 1;
+            transform: translateY(-100px);
+        }
+
+        .btn {
+            position: relative;
+            width: 100px;
+            margin: 20px auto;
+        }
+
+        .btn button {
+            padding: 10px 25px;
+            font-size: 1.25em;
+            background: none;
+            border: none;
+        }
+
+        .before,
+        .after {
+            height: 5px;
+            width: 1%;
+            background-color: black;
+            position: absolute;
+            opacity: 0;
+            transition: all .5s;
+        }
+
+        .before {
+            right: 0;
+        }
+
+        .btn:hover .after,
+        .btn:hover .before {
+            width: 100%;
+            opacity: 1;
+        }
+
+        .animation {
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            border: solid;
+            animation-name: animation-one;
+            animation-duration: .5s;
+            /* animation-delay: ; */
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
+            border-radius: 50%;
+        }
+
+        @keyframes animation-one {
+            from {
+                opacity: 1;
+                width: 100px;
+            }
+
+            to {
+                opacity: 0;
+                width: 100px;
+            }
+        }
+
+        .box-animation {
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            animation-name: moving;
+            animation-duration: 2s;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
+
+        }
+
+        @keyframes moving {
+            0% {
+                margin-top: 0;
+                margin-left: 0;
+                background-color: red;
+            }
+
+            25% {
+                margin-top: 0;
+                margin-left: 300px;
+                background-color: yellow;
+            }
+
+            50% {
+                margin-top: 300px;
+                margin-left: 300px;
+                background-color: green;
+            }
+
+            75% {
+                margin-top: 300px;
+                margin-left: 0px;
+                background-color: blue;
+            }
+
+            100% {
+                margin-top: 0;
+                margin-left: 0;
+                background-color: red;
+            }
+        }
+
+        .faltu {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+
+        .transtime {
+            background-color: chartreuse;
+            border: 0.5px solid black;
+            width: 200px;
+            height: 200px;
+            transition: all 1s;
+            transition-timing-function: linear;
+        }
+
+        .transtime:hover {
+            width: 600px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="text-animation">
+        <img src="../../images/Office.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem earum atque excepturi eius laborum
+            voluptates iste, fugiat sit ipsa, animi ullam blanditiis dolorum modi iusto quidem impedit voluptatem
+            consequatur possimus ab. Nihil facere dignissimos distinctio fugit fuga voluptatibus natus veniam. Ducimus
+            illo, iste veritatis neque voluptatibus modi nemo blanditiis maiores?</p>
+    </div>
+    <!-- <div class="btn">
+        <div class="before"></div>
+        <button>Click</button>
+        <div class="after"></div>
+    </div> -->
+
+    <!-- Animations -->
+    <div class="animation"></div>
+
+    <div class="box-animation"></div>
+    <div class="faltu"></div>
+    <div class="transtime"></div>
+    
+    <!-- 
+        ease - slow
+        In - starting
+        Out - ending
+        ease-in ->
+        ease-out -> 
+        ease-in-out -> 
+        linear -> 
+     -->
+</body>
+
+</html>

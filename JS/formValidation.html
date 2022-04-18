@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validations using JS</title>
+</head>
+<body>
+    <form action="day1.html" method="post">
+        <div>
+            <label for="name">Enter Name: </label> <br>
+            <input type="text" name="name" id="name" autocomplete="off">
+        </div>
+        <small id="msg"></small> <br>
+        <input type="submit" value="Enter">
+    </form>
+    <script>
+        let inpfield = document.getElementById("name")
+        let sm = document.getElementById("msg")
+        inpfield.addEventListener("focus", ()=>{
+            sm.innerHTML = "Name should start with capital letter. And length can be in betweeen 3 and 20"
+        })
+        inpfield.addEventListener("blur", ()=>{
+            document.body.style.backgroundColor = "skyblue"
+        })
+        let form = document.getElementsByTagName("form")
+        form[0].addEventListener("submit", (e)=> {
+            let nameValue = inpfield.value 
+            console.log(nameValue);
+            let nameRegEx = /^[A-Z][a-z]{2,19}$/
+            let result = nameRegEx.test(nameValue) 
+            if(result) {
+                // alert("Name is correct");
+                sm.innerHTML = "Name is Correct"
+                sm.style.color = "green"
+                e.preventDefault();
+            }
+            else {
+                // alert("Incorrect name");
+                sm.innerHTML = "Name is incorrect"
+                sm.style.color = "red"
+                e.preventDefault();
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Date Object</title>
+
+    <style>
+        #date {
+            color: blue;
+            background-color: yellow;
+            text-align: center;
+            font-size: 3em;
+        }
+
+        #time {
+            color: yellow;
+            background-color: blue;
+            text-align: center;
+            font-size: 5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="date"></div>
+    <div id="time"></div>
+    <script>
+        // let d = new Date;
+        // console.log(d);
+        // let oldtime = d.getTime()
+
+        // // let newd = new Date(2032, 7, 8, 11, 23)
+        // // console.log(newd);
+
+        // let minutes = d.getMinutes()
+        // let seconds = d.getSeconds()
+        // let hour = d.getHours()
+
+
+        // console.log(d.getFullYear())
+        // console.log(d.getMonth())
+        // console.log(d.getDate())
+        // console.log(d.getDay())
+        // console.log(d.getTime())
+
+        // console.log(hour + ":" + minutes + ":" + seconds);
+        // let another = new Date
+        // let newtime = another.getTime()
+
+        // let timeConsumed = newtime-oldtime
+        // console.log("Time taken is", timeConsumed);
+
+        // let datevalue = document.getElementById("date")
+        // let time = document.getElementById("time")
+
+        // let d = new Date;
+
+        // let month = d.getMonth()
+        // let date = d.getDate()
+        // let year = d.getFullYear()
+        // let minutes = d.getMinutes()
+        // let seconds = d.getSeconds()
+        // let hour = d.getHours()
+
+        // console.log("Date:- " + date + "/" + month + "/" + year);
+        // console.log("Time:- " + hour + ":" + minutes + ":" + seconds);
+        // datevalue.innerHTML = "Date:- " + date + "/" + month + "/" + year
+        // time.innerHTML = "Time:- " + hour + ":" + minutes + ":" + seconds
+
+
+        function abc() {
+            // console.log("Hi, I am a function")
+            alert("Hello")
+        }
+
+        // setTimeout(() => {
+        //     alert("Hi, I am an arrow function")
+        // }, 1000)
+
+
+        // setInterval(function() {
+        //     alert("3 seconds have passed")
+        // }, 3000)
+
+        function current() {
+            let datevalue = document.getElementById("date")
+            let time = document.getElementById("time")
+
+            let d = new Date;
+
+            let month = d.getMonth()
+            // switch(month) {
+            //     case 0:
+            //         monthname = "January"
+            //         break;
+            //     case 1:
+            //         monthname = "February"
+            //         break;
+            //     case 2:
+            //         monthname = "March"
+            //         break;
+            // }
+            let monthnames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+            let date = d.getDate()
+            let year = d.getFullYear()
+            let minutes = d.getMinutes()
+            let seconds = d.getSeconds()
+            let hour = d.getHours()
+            let text = d.toLocaleTimeString();
+            let datetext = d.toLocaleDateString()
+            let monthtext = d.toLocaleDateString()
+            console.log("Date:- " + date + "/" + monthnames[month] + "/" + year);
+            console.log("Time:- " + hour + ":" + minutes + ":" + seconds);
+            datevalue.innerHTML = date + "/" + monthnames[month] + "/" + year
+            // datevalue.innerHTML = "Date:- " + datetext
+            // time.innerHTML = "Time:- " + hour + ":" + minutes + ":" + seconds
+            time.innerHTML = text
+        }
+
+        current()
+        setInterval(current, 1000)
+    </script>
+</body>
+
+</html>

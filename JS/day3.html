@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Control structure</title>
+</head>
+<body>
+    <script>
+        let num1 = parseFloat(prompt("Enter a number"));
+        let num2 = parseFloat(prompt("Enter another number"));
+
+        let add = num1 + num2
+        let sub = num1 - num2
+
+        // console.log(add)
+        console.log(sub)
+
+        // let str = "My name is"
+        // let str2 = "Haaris"
+        // console.log(str + str2);
+
+        // str2 = 123
+        // console.log(str + str2);
+
+        // "abc" + "def" => concatenation => abcdef
+        // "34" + "12" => concatenation => 3412
+
+
+        // Control Structure - 1. Sequential, 2. Conditional, and 3. Iterative(Repetition)
+
+        // Conditional control structure
+        // if(condition) {
+            // statements
+        // }
+        // else {
+            // statements
+        // }
+
+        /* 
+        STATEMENT - A line of code that is alphabetically, lexically, syntatically and semantically correct.
+        */
+
+        let a = 341
+        let b = 51
+        if (b == 55) {
+            b = b - 10
+            console.log("Value of B is", b);
+        }
+        else {
+            console.log("Doing nothing, because the condition is false");
+        }
+
+
+
+        // Program to find which of the two numbers is smaller
+        // if (a > b) {
+        //     console.log(a + " is greater");
+        // }
+        // else {
+        //     console.log(b + " is greater");
+        // }
+
+        // Take a number, print its square if the number is even or its cube if the number is odd 
+
+        // let x = 8
+        // if (x % 2 == 0) {
+        //     console.log("This is an even number");
+        //     console.log("Printing the square", x ** 2);
+        // }
+        // else {
+        //     console.log("This is an odd number");
+        //     console.log("Printing the cube", x ** 3);
+        // }
+
+        let a1 = 30
+        let a2 = 45
+
+        // if (a1 < a2 && a1 == 30 && a2 == 40) {
+        //     console.log("All the conditions are true");
+        // }
+        // else {
+        //     console.log("All conditions are not true");
+        // }
+
+        if (a1 > a2 || a1 == 40 && a2 == 45) {
+            console.log("All the conditions are true");
+        }
+        else {
+            console.log("All conditions are not true");
+        }
+
+        // Nested IF - ELSE
+        // IF-ELSE IF Ladder
+    </script>
+</body>
+</html>

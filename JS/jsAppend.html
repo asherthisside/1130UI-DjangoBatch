@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appending with JS</title>
+</head>
+<body>
+    <div class="intro"></div>
+
+    <script>
+        let heading = document.createElement("h1")
+        heading.id = "head1"
+        heading.classList.add("heading")
+        heading.innerHTML = "My Introdcution"
+        heading.style.color = "yellow"
+        heading.style.textAlign = "center"
+        heading.style.backgroundColor = "skyblue"
+        console.log(heading.style.color);
+
+        let div = document.getElementsByClassName("intro")
+        console.log(div);
+        div[0].appendChild(heading)
+
+        let divider = document.createElement("hr")
+        div[0].appendChild(divider)
+
+        let para = document.createElement("p")
+        para.innerHTML = "Thsis is tjarefva urgfaervaekrbva iurgfieaurg vakd ieurgfiaujg diuaergfhiurg jwHOAWUGF AK"
+        div[0].appendChild(para)
+    </script>
+</body>
+</html>

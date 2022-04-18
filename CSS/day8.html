@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Float and clear</title>
+    <style>
+        .container {
+            background-color: brown;
+            height: 550px;
+            width: 100%;
+        }
+
+        .box {
+            height: 150px;
+            width: 200px;
+            background-color: cadetblue;
+            margin: 10px;
+        }
+
+        #b1 {
+            background-color: teal;
+            float: left;
+        }
+
+        #b2 {
+            background-color: slateblue;
+            float: right;
+        }
+
+        #b3 {
+            clear: both;
+        }
+        
+        ul li {
+            float: right;
+            margin: auto 20px;
+        }
+
+        .new-box {
+            height: 200px;
+            width: 200px;
+            /* background-color: lime; */
+            outline: 2px solid black;
+            border: 2px solid lime;
+        }
+
+        .other {
+            float: left;
+            width: calc(50% - 20px);
+            /* width: 50%; */
+            border: 10px solid;
+            height: calc(100% - 20px);
+        }
+        
+        .another {
+            float: right;
+            width: calc(50% - 20px);
+            /* width: 50%; */
+            border: 10px solid lime;
+            height: calc(100% - 20px);
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <div class="box" id="b1">1</div>
+        <div class="box" id="b2">2</div>
+        <div class="box" id="b3">3</div>
+    </div> -->
+
+    <!-- <ul>
+        <li>abc</li>
+        <li>def</li>
+        <li>ghi</li>
+        <li>jkl</li>
+        <li>mno</li>
+    </ul> -->
+
+    calc() function
+
+    <div class="new-box">
+        <div class="other"></div>
+        <div class="another"></div>
+    </div>
+</body>
+</html>
+box-sizing :- border-box 
