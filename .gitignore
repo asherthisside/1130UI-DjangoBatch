@@ -2,3 +2,5 @@ abcdef.txt
 mylogs.log
 sampleAudio.mp3
 sampleVideo.mp4
+logs/
+HTMLFiles/*.html
