@@ -8,7 +8,6 @@ def timer(func):
         func(a)
         new_time = time.time()
         print(f"Time taken is {round(new_time - old_time, 3)} seconds")
-
     return internal
 
 
