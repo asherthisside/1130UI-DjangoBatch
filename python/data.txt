@@ -1,0 +1,4 @@
+This is the text that we wrote using the write method
+Writing one more line...
+This is the 3rd Line..
+There are 4 lines in this file
