@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Introduction</title>
+    <link rel="stylesheet" href="{% static 'css/intro.css' %}">
+</head>
+<body>
+    <a href="{% url 'home' %}">&larr; Go Back</a>
+    <h1 id="head">this is the Introduction page</h1>
+    <img src="{% static 'images/shirt.jpg' %}" alt="">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Roll Number</th>
+            <th>Address</th>
+        </tr>
+        
+        <tr>
+            <td>abc</td>
+            <td>12</td>
+            <td>023q</td>
+            <td>Noida</td>
+        </tr>
+        <tr>
+            <td>abc</td>
+            <td>12</td>
+            <td>023q</td>
+            <td>Noida</td>
+        </tr>
+        <tr>
+            <td>abc</td>
+            <td>12</td>
+            <td>023q</td>
+            <td>Noida</td>
+        </tr>
+        <tr>
+            <td>abc</td>
+            <td>12</td>
+            <td>023q</td>
+            <td>Noida</td>
+        </tr>
+        <tr>
+            <td>abc</td>
+            <td>12</td>
+            <td>023q</td>
+            <td>Noida</td>
+        </tr>
+        <tr>
+            <td>abc</td>
+            <td>12</td>
+            <td>023q</td>
+            <td>Noida</td>
+        </tr>
+    </table>
+    <img src="{% static 'images/shoes.jpg' %}" alt="">
+    <script src="{% static 'js/code.js' %}"></script>
+</body>
+</html>

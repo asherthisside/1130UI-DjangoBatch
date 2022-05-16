@@ -1,0 +1,16 @@
+h1 {
+    text-transform: capitalize;
+    background-color: dodgerblue;
+    font-size: 45px;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 10px 35px;
+    border-bottom: 2px solid black;
+}
+

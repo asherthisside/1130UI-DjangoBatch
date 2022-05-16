@@ -1,0 +1,21 @@
+h1{
+    background-color: black;
+    color: white;
+    padding: 10px auto;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    text-align: justify;
+    color: gray;
+}
+
+a button {
+    padding: 10px 25px;
+    background-color: cornflowerblue;
+    border: none;
+    font-size: 1.25em;
+    color: white;
+    cursor: pointer;
+}
