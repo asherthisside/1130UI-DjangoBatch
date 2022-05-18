@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty data</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Here's the faculty data</h1> 
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Qualification</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+        {% for faculty in all_faculty %}
+        <tr>
+            <td>{{ faculty.id }}</td>
+            <td>{{ faculty.faculty_name }}</td>
+            <td>{{ faculty.qualification }}</td>
+            <td>{{ faculty.salary }}</td>
+            <td>
+                <a href="update"><button>Update</button></a>
+                <a href="delete"><button>Delete</button></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+   
+</body>
+</html>
