@@ -9,4 +9,6 @@ urlpatterns = [
     path('prem-sir-ka-data', views.premsir, name='prem'),
     path('delete', views.delete, name='delete'),
     path('update', views.update, name='update'),
+    path('add-new-faculty', views.addFac, name='addFaculty'),
+    path('form-data', views.display, name='datadisplay'),
 ]
