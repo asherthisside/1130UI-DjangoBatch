@@ -21,7 +21,18 @@ def delete(request):
     return render(request, 'delete.html')
 
 def addFac(request):
-    return render(request, 'add-faculty-form.html')
+    if request.method == "POST":
+        name = request.POST.get('name')
+        qual = request.POST.get('qualification')
+        sal = request.POST.get('salary')
+        context = {
+            'name' : name,
+            'qualification' : qual,
+            'salary' : sal,
+        }
+        return render(request, 'add-faculty-form.html', context)
+    else:
+        return render(request, 'add-faculty-form.html')
 
 
 def display(request):
