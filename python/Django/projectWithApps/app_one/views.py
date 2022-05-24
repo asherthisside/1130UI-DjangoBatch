@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Student, Faculty
 
 # Create your views here.
@@ -9,10 +9,6 @@ def homepage(request):
 def facdata(request):
     faculties = Faculty.objects.all()
     return render(request, 'faculty.html', {'all_faculty' : faculties})
-
-def premsir(request):
-    fac = Faculty.objects.get(faculty_name = 'Prem sir')
-    return render(request, 'prem.html', {'faculty' : fac})
 
 def update(request):
     return render(request, 'update.html')
@@ -25,15 +21,27 @@ def addFac(request):
         name = request.POST.get('name')
         qual = request.POST.get('qualification')
         sal = request.POST.get('salary')
-        context = {
-            'name' : name,
-            'qualification' : qual,
-            'salary' : sal,
-        }
-        return render(request, 'add-faculty-form.html', context)
-    else:
-        return render(request, 'add-faculty-form.html')
 
+        # print(name, sal, qual)
+        fac = Faculty(faculty_name=name, qualification=qual, salary=sal)
+        fac.save()
+
+        return redirect("faculty")
+
+    return render(request, 'add-faculty-form.html')
+
+def addStudent(request):
+    if request.method == 'POST':
+        entered_name = request.POST['name']
+        entered_age = request.POST['age']
+        entered_address = request.POST['address']
+
+        s = Student(student_name=entered_name, age=entered_age, address=entered_address)
+        s.save()
+
+        return redirect("homepage")
+
+    return render (request, 'add-student.html')
 
 def display(request):
     if request.method == "POST":

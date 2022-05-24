@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result is here</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <table border="1">
+            <tr>
+                <th>No. of Words: </th>
+                <td>{{ words }}</td>
+            </tr>
+            
+            <tr>
+                <th>No. of letters: </th>
+                <td>{{ letters }}</td>
+            </tr>
+
+            <tr>
+                <th>Vowels: </th>
+                <td>{{ vowels }}</td>
+            </tr>
+            
+            <tr>
+                <th>Consonats: </th>
+                <td>{{ consonants }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -7,19 +7,19 @@
     <title>Add New Faculty</title>
 </head>
 <body>
-    <form action="add-new-faculty" method="POST">
+    <form action="add-new-student" method="POST">
         {% csrf_token %}
         <div>
             <label for="">Enter Name: </label> <br>
             <input type="text" name="name" id=""">
         </div>
         <div>
-            <label for="">Enter qualification: </label> <br>
-            <input type="text" name="qualification" id="" >
+            <label for="">Enter Age: </label> <br>
+            <input type="text" name="age" id="" >
         </div>
         <div>
-            <label for="">Enter Salary: </label> <br>
-            <input type="number" name="salary" id="" >
+            <label for="">Enter Address: </label> <br>
+            <textarea name="address" id="" cols="70" rows="10"></textarea>
         </div>
         <p>
             <input type="submit" value="Enter">
