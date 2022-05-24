@@ -11,4 +11,5 @@ urlpatterns = [
     path('update', views.update, name='update'),
     path('add-new-faculty', views.addFac, name='addFaculty'),
     path('form-data', views.display, name='datadisplay'),
+    path('post/<str:pk>', views.post, name='post'),
 ]

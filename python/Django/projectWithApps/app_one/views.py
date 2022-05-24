@@ -11,7 +11,12 @@ def facdata(request):
     return render(request, 'faculty.html', {'all_faculty' : faculties})
 
 def update(request):
-    return render(request, 'update.html')
+    posts =[1, 2, 3, 4, 5, 6, 7]
+    return render(request, 'update.html', {'posts' : posts})
+
+
+def post (request, pk):
+    return render (request, 'post.html', {'post_number' : pk})
 
 def delete(request):
     return render(request, 'delete.html')
