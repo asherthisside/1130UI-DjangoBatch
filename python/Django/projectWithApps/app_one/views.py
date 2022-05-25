@@ -1,3 +1,4 @@
+from wsgiref.util import request_uri
 from django.shortcuts import render, redirect
 from .models import Student, Faculty
 
@@ -10,9 +11,23 @@ def facdata(request):
     faculties = Faculty.objects.all()
     return render(request, 'faculty.html', {'all_faculty' : faculties})
 
-def update(request):
-    posts =[1, 2, 3, 4, 5, 6, 7]
-    return render(request, 'update.html', {'posts' : posts})
+def update(request, pk):
+    if request.method == 'POST':
+        new_name = request.POST['name']
+        new_qualification = request.POST['qualification']
+        new_salary = request.POST['salary']
+
+        old_fac = Faculty.objects.get(id=pk)
+        old_fac.faculty_name = new_name
+        old_fac.qualification = new_qualification
+        old_fac.salary = new_salary
+
+        old_fac.save()
+        return redirect("faculty")
+
+    else:
+        fac = Faculty.objects.get(id=pk)
+        return render(request, 'update.html', {'faculty' : fac})
 
 
 def post (request, pk):
@@ -64,3 +79,4 @@ def display(request):
         return render(request, 'display.html', context)
     else:
         return render(request, 'display.html')
+
