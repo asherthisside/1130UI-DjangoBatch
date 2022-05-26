@@ -33,8 +33,10 @@ def update(request, pk):
 def post (request, pk):
     return render (request, 'post.html', {'post_number' : pk})
 
-def delete(request):
-    return render(request, 'delete.html')
+def delete(request, pk):
+    fac = Faculty.objects.get(id=pk)
+    fac.delete()
+    return redirect("faculty")
 
 def addFac(request):
     if request.method == "POST":

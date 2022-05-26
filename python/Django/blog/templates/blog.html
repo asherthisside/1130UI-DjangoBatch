@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ASHER-X - Blog Site</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+  <header>
+    <a href="{% url 'blog' %}"><div class="logo">ASHER - X</div></a>
+    <button>Login</button>
+  </header>
+  <!-- partial:index.partial.html -->
+  <div class="container">
+    <div class="card" style="width: 80%; padding-top: 1rem;">
+      <div class="card__header">
+        <img style="display: block; margin: auto; border-radius: 1rem;" src="https://source.unsplash.com/600x400/?{{blog.id}},{{blog.blog_category}}" alt="card__image" class="card__image" width="600">
+      </div>
+      <div class="card__body">
+        <span class="tag tag-blue">{{blog.category}}</span>
+        <h4>{{blog.title}}</h4>
+        <p>{{blog.description}}</p>
+      </div>
+      <div class="card__footer">
+        <div class="user">
+          <div class="user__info">
+            <h5>{{blog.author}}</h5>
+            <small>{{blog.created_at}}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- partial -->
+
+</body>
+
+</html>

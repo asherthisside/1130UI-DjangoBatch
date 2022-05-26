@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ASHER-X - Blog Site</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">ASHER - X</div>
+    <button>Login</button>
+  </header>
+  <!-- partial:index.partial.html -->
+  <div class="container">
+    {% for blog in blogs reversed %}
+    <div class="card">
+      <div class="card__header">
+        <img src="{{ blog.blog_picture.url }}" alt="card__image" class="card__image" width="600">
+      </div>
+      <div class="card__body">
+        <span class="tag tag-blue">{{blog.category}}</span>
+        <h4>{{blog.title}}</h4>
+        <p>{{blog.description|truncatewords:25}}</p>
+        <a style="text-decoration: none;" href="blog/{{blog.id}}">Read More >>> </a>
+      </div>
+      <div class="card__footer">
+        <div class="user">
+          <div class="user__info">
+            <h5>{{blog.author}}</h5>
+            <small>{{blog.created_at}}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- partial -->
+
+</body>
+
+</html>
