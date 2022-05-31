@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <i class="fas fa-user-tie"></i>
+        </div>
+        <div class="form">
+            <h2>Enter Details</h2>
+            <form action="#" method="post">
+                {% csrf_token %}
+            <div class="name-field">
+                <div class="name-label">
+                    <label for="name-field"><small>Enter Name:</small></label>
+                </div>
+                <i class="fas fa-user"></i><input name="username" type="text" id="name-field">
+            </div>
+            <div class="pass-field">
+                <div class="name-label">
+                    <label for="pass-field"><small>Enter Password:</small></label>
+                </div>
+                <i class="fas fa-lock"></i><input name="password"  type="password" id="pass-field">
+            </div>
+            <div class="btn">
+                <button type="submit">Login</button>
+                <a href="{% url 'signup' %}" style="float: right;">Sign Up</a>
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

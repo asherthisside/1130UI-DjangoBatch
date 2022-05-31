@@ -1,6 +1,8 @@
 from django.shortcuts import redirect, render
 from django.contrib import messages, auth
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 def index(request):
@@ -54,5 +56,10 @@ def login(request):
     else: 
         return render(request, 'login.html')
 
+@login_required(login_url="login")
 def dashboard(request):
     return render(request, 'dashboard.html')
+
+def logout(request):
+    auth.logout(request)
+    return redirect("login")

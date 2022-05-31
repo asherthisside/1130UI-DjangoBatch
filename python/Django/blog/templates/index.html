@@ -13,7 +13,11 @@
 <body>
   <header>
     <div class="logo">ASHER - X</div>
-    <button>Login</button>
+    {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}"><button>Logout</button></a>
+    {% else %}
+    <a href="{% url 'login' %}"><button>Log in</button></a>
+    {% endif %}
   </header>
   <!-- partial:index.partial.html -->
   <div class="container">

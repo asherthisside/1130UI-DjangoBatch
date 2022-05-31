@@ -1,5 +1,2 @@
-{% if user.is_authenticated %}
-This is Dashboard page
-{% else %} 
-You are not signed in. Please <a href="{% url 'login'%}">Login</a> here
-{% endif %}
+This is Dashboard Page
+<a href="{% url 'logout' %}"><button>Logout</button></a>
