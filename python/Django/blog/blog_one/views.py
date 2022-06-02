@@ -51,7 +51,7 @@ def signup(request):
             elif User.objects.filter(email=entered_email).exists():
                 messages.info(request, "Email already in use")
                 return redirect ("signup")
-
+  
             else:
                 user = User.objects.create_user(username=entered_username, email=entered_email, first_name = entered_fname, last_name = entered_lname, password = entered_password)
 
