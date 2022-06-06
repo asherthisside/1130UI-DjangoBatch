@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import LoginForm
+from .forms import LoginForm, SimpleForm, StudentForm
 
 # Create your views here.
 def index(request):
@@ -18,3 +18,12 @@ def index(request):
     else:
         form = LoginForm()
         return render(request, 'index.html', {'login_form' : form})
+
+def widgets(request):
+    form = SimpleForm()
+    context = {'form' : form}
+    return render(request, 'form-two.html', context)
+
+def studentForm(request):
+    stform = StudentForm()
+    return render(request, 'student-form.html', {'form' : stform})
