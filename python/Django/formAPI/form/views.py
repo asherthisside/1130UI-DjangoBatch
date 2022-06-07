@@ -27,3 +27,6 @@ def widgets(request):
 def studentForm(request):
     stform = StudentForm()
     return render(request, 'student-form.html', {'form' : stform})
+
+
+    # ORM 
