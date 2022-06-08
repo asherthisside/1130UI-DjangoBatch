@@ -1,3 +1,6 @@
+from day13 import B
+
+
 f = open("intro.txt", "r")
 # print(f.read(12))
 # print(f.read(4))

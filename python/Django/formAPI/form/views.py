@@ -29,4 +29,4 @@ def studentForm(request):
     return render(request, 'student-form.html', {'form' : stform})
 
 
-    # ORM 
+    # ORM  

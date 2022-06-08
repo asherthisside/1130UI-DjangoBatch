@@ -10,7 +10,7 @@ class Room(models.Model):
 
 class Guest(models.Model):
     name = models.CharField(max_length=40)
-    room = models.OneToOneField(Room, on_delete=models.CASCADE)
+    room = models.OneToOneField(Room, on_delete=models.SET_DEFAULT, default="N/A")
 
     def __str__(self) -> str:
         return self.name
@@ -28,3 +28,20 @@ class Framework(models.Model):
     def __str__(self) -> str:
         return self.name
 
+
+class Subject(models.Model):
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
+
+
+class Student(models.Model):
+    name = models.CharField(max_length=40)
+    subjects = models.ManyToManyField(Subject)
+
+    def __str__(self):
+        return self.name
+
+
+# Lookups - 
