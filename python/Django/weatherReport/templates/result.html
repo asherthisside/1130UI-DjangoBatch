@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather - In {{ city_name }}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Report of <span id="city">{{ city_name }}</span></h1>
+        <div class="result-card">
+            <div class="main">
+                <span>Weather</span>{{ main }}
+            </div>
+
+            <div class="description">
+                <span>Description</span>{{ description }}
+            </div>
+
+            <div class="country-code">
+                <span>Country Code</span>{{ country_code }}
+            </div>
+
+            <div class="coordinates">
+                <span>Co - ordinates</span>{{ coords }}
+            </div>
+
+            <div class="temprature">
+                <span>Temprature</span>{{ temprature }}
+            </div>
+
+            <div class="pressure">
+                <span>Pressure</span>{{ pressure }}
+            </div>
+
+            <div class="humidity">
+                <span>Humidity</span>{{ humidity }}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
