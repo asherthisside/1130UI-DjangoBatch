@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 from django.shortcuts import get_object_or_404
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -8,8 +7,8 @@ from rest_framework import status
 
 # Create your views here.
 class CartView(APIView):
-    def get(self, request, pk=NULL):
-        if pk != NULL:
+    def get(self, request, pk=None):
+        if pk != None:
             item = Shoppingcart.objects.get(id=pk)
             serializer = Cartserializer(item)
             return Response({"status":"Success", "data" : serializer.data}, status=status.HTTP_200_OK)

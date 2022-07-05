@@ -69,3 +69,4 @@ with open("office.jpg", "rb") as f2:
 
 with open("newImage.jpg", "wb") as f3:
     f3.write(image_data)
+
